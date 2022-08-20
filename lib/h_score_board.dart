@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HScoreBoardPage extends StatefulWidget {
   HScoreBoardPage({
@@ -90,14 +91,16 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                       topLeft: Radius.circular(80),
                       bottomRight: Radius.circular(80),
                     )),
-                width: width * 0.40,
+                width: width * 0.4,
                 height: 45,
                 child: Center(
                   child: Text(
                     widget.p1name.toUpperCase(),
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.ptSerif(
+                      textStyle: TextStyle(
+                        fontSize: 35,
+                        // fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -114,9 +117,12 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                   width: width * 0.17,
                   height: 40,
                   child: Center(
-                      child: Text(
-                          '$p1_wins   (${widget.totalframes})   $p2_wins',
-                          style: TextStyle(fontSize: 25)))),
+                      child:
+                          Text('$p1_wins   (${widget.totalframes})   $p2_wins',
+                              style: TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              )))),
               // Player 2 Name
               Container(
                 decoration: BoxDecoration(
@@ -134,9 +140,11 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 child: Center(
                   child: Text(
                     widget.p2name.toUpperCase(),
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.ptSerif(
+                      textStyle: TextStyle(
+                        fontSize: 35,
+                        // fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
@@ -149,7 +157,6 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
             children: [
               // Individual Player 1 Balls Pot Count
               Container(
-                // padding: EdgeInsets.fromLTRB(8, 0, 8, 0),
                 height: 39,
                 child: Card(
                   elevation: 3,
@@ -300,8 +307,10 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                   elevation: 5,
                   child: Center(
                       child: Text(
-                    'GreenBullCafe',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    'Greenbull Cafe',
+                    style: GoogleFonts.ptSerif(
+                        textStyle:
+                            TextStyle(fontSize: 20, color: Colors.white)),
                   )),
                 ),
               ),
@@ -487,17 +496,19 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [
-                                  Text('$p1maxbreak',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                      )),
+                                  Text(
+                                    '$p1maxbreak',
+                                    style: GoogleFonts.ptSerif(
+                                      textStyle: TextStyle(
+                                          fontSize: 20, color: Colors.white
+                                          // fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                  ),
                                   Text(
                                     'MAX BREAK',
                                     style: TextStyle(
-                                      fontSize: 15,
-                                      color: Colors.white,
-                                    ),
+                                        fontSize: 15, color: Colors.white),
                                   )
                                 ]),
                           ),
@@ -525,11 +536,15 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                       color: Colors.white,
                                     ),
                                   ),
-                                  Text('$p1fouls',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                      ))
+                                  Text(
+                                    '$p1fouls',
+                                    style: GoogleFonts.ptSerif(
+                                      textStyle: TextStyle(
+                                          fontSize: 20, color: Colors.white
+                                          // fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                  )
                                 ]),
                           )
                         ]),
@@ -545,16 +560,19 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                     (p1_score > p2_score)
                                         ? (p1_score - p2_score).toString()
                                         : '0',
-                                    style: TextStyle(
-                                        fontSize: 55, color: Colors.white)),
+                                    style: GoogleFonts.ptSerif(
+                                        textStyle: TextStyle(
+                                            fontSize: 55,
+                                            color: Colors.white))),
                               )),
                           Card(
                             color: Colors.grey.shade800,
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(8, 5, 8, 5),
                               child: Text('POINTS  $p1_score',
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.white)),
+                                  style: GoogleFonts.ptSerif(
+                                      textStyle: TextStyle(
+                                          fontSize: 20, color: Colors.white))),
                             ),
                           ),
                         ]),
@@ -647,16 +665,19 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                     (p2_score > p1_score)
                                         ? (p2_score - p1_score).toString()
                                         : '0',
-                                    style: TextStyle(
-                                        fontSize: 55, color: Colors.white)),
+                                    style: GoogleFonts.ptSerif(
+                                        textStyle: TextStyle(
+                                            fontSize: 55,
+                                            color: Colors.white))),
                               )),
                           Card(
                             color: Colors.grey.shade800,
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(8, 5, 8, 5),
                               child: Text('POINTS  $p2_score',
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.white)),
+                                  style: GoogleFonts.ptSerif(
+                                      textStyle: TextStyle(
+                                          fontSize: 20, color: Colors.white))),
                             ),
                           ),
                         ]),
@@ -678,9 +699,15 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [
-                                  Text('$p2maxbreak',
-                                      style: TextStyle(
-                                          fontSize: 20, color: Colors.white)),
+                                  Text(
+                                    '$p2maxbreak',
+                                    style: GoogleFonts.ptSerif(
+                                      textStyle: TextStyle(
+                                          fontSize: 20, color: Colors.white
+                                          // fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                  ),
                                   Text(
                                     'MAX BREAK',
                                     style: TextStyle(
@@ -710,11 +737,15 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                     style: TextStyle(
                                         fontSize: 15, color: Colors.white),
                                   ),
-                                  Text('$p2fouls',
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.white,
-                                      ))
+                                  Text(
+                                    '$p2fouls',
+                                    style: GoogleFonts.ptSerif(
+                                      textStyle: TextStyle(
+                                          fontSize: 20, color: Colors.white
+                                          // fontWeight: FontWeight.bold,
+                                          ),
+                                    ),
+                                  )
                                 ]),
                           )
                         ]),
@@ -743,7 +774,9 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           bottomRight: Radius.circular(80),
                         )),
                     child: Center(
-                        child: Text('Remaining Reds ${widget.totalreds}'))),
+                        child: Text(
+                      'Remaining Reds ${widget.totalreds}',
+                    ))),
               ),
               // Balls Potting Buttons
               Card(
@@ -1129,6 +1162,22 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               ElevatedButton.icon(
                 onPressed: () {
                   setState(() {
+                    p1pots1 = 0;
+                    p1pots2 = 0;
+                    p1pots3 = 0;
+                    p1pots4 = 0;
+                    p1pots5 = 0;
+                    p1pots6 = 0;
+                    p1pots7 = 0;
+                    p2pots1 = 0;
+                    p2pots2 = 0;
+                    p2pots3 = 0;
+                    p2pots4 = 0;
+                    p2pots5 = 0;
+                    p2pots6 = 0;
+                    p2pots7 = 0;
+                    p1fouls = p2fouls = 0;
+                    p1maxbreak = p2maxbreak = 0;
                     curr_break = 0;
                     if (p1_score > p2_score) {
                       p1_wins++;
@@ -1161,6 +1210,15 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               ),
             ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text('Developed by ~>> Divij Sahu!       ',
+                  style: GoogleFonts.ptSerif(
+                      textStyle:
+                          TextStyle(fontSize: 10, color: Colors.blueGrey)))
+            ],
+          )
         ],
       ),
     );
