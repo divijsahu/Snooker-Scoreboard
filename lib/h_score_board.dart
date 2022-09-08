@@ -157,7 +157,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
             children: [
               // Individual Player 1 Balls Pot Count
               Container(
-                height: 39,
+                height: 38,
                 child: Card(
                   elevation: 3,
                   color: Colors.transparent,
@@ -271,7 +271,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                       ),
                       Container(
                         width: 35,
-                        height: 24,
+                        height: 25,
                         decoration: BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.circular(5),
@@ -333,7 +333,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           ),
                         ),
                         width: 35,
-                        height: 24,
+                        height: 25,
                         child: Card(
                           color: Colors.black,
                           elevation: 3,
@@ -1056,12 +1056,35 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       FloatingActionButton.small(
+                        // Increase Reds Count Button
                         onPressed: () {
-                          if (widget.totalreds > 0) widget.totalreds--;
                           // left_points = widget.totalreds * 8 + 27;
                           // if (widget.totalreds > 0) widget.totalreds--;
                           // left_points--;
                           setState(() {
+                            if (widget.totalreds < widget.totalredsdummy) {
+                              widget.totalreds++;
+                            }
+                            // if (current_turn == 1) {
+                            //   p2_score += 4;
+                            // } else {
+                            //   p1_score += 4;
+                            // }
+                          });
+                        },
+                        backgroundColor: Colors.red,
+                        child: Icon(
+                          Icons.add_rounded,
+                          color: Colors.black,
+                        ),
+                      ),
+                      FloatingActionButton.small(
+                        onPressed: () {
+                          // left_points = widget.totalreds * 8 + 27;
+                          // if (widget.totalreds > 0) widget.totalreds--;
+                          // left_points--;
+                          setState(() {
+                            if (widget.totalreds > 0) widget.totalreds--;
                             // if (current_turn == 1) {
                             //   p2_score += 4;
                             // } else {
@@ -1210,6 +1233,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               ),
             ],
           ),
+          // Developer Credits
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
