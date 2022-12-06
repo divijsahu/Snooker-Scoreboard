@@ -16,8 +16,8 @@ class MyHHomePage extends StatefulWidget {
 }
 
 class _MyHHomePageState extends State<MyHHomePage> {
-  final _player1 = TextEditingController()..text = 'Green Bull';
-  final _player2 = TextEditingController()..text = 'Little Talk';
+  final _player1 = TextEditingController()..text = 'Mark Selby';
+  final _player2 = TextEditingController()..text = 'Judd Trump';
   final _formKey = GlobalKey<FormState>();
 
   int frame_count = 3;
@@ -151,7 +151,7 @@ class _MyHHomePageState extends State<MyHHomePage> {
                       ),
                       // GB Logo
                       Image.asset(
-                        'images/GBnamelogo2.jpeg',
+                        'images/divij.sahu.logo.trans2.png',
                         height: 200,
                         fit: BoxFit.fitHeight,
                       ),
@@ -299,15 +299,16 @@ class _MyHHomePageState extends State<MyHHomePage> {
                       ],
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text('Developed by ~>> Divij Sahu!    ',
-                          style: GoogleFonts.ptSerif(
-                              textStyle: TextStyle(
-                                  fontSize: 12, color: Colors.blueGrey)))
-                    ],
-                  )
+                  //Developer Credits
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.end,
+                  //   children: [
+                  //     Text('Developed by ~>> Divij Sahu!    ',
+                  //         style: GoogleFonts.ptSerif(
+                  //             textStyle: TextStyle(
+                  //                 fontSize: 12, color: Colors.blueGrey)))
+                  //   ],
+                  // )
                 ],
               ),
             )));

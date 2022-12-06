@@ -95,7 +95,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 height: 45,
                 child: Center(
                   child: Text(
-                    widget.p1name.toUpperCase(),
+                    widget.p1name ,
+                    // .toUpperCase(),
                     style: GoogleFonts.ptSerif(
                       textStyle: TextStyle(
                         fontSize: 35,
@@ -121,7 +122,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           Text('$p1_wins   (${widget.totalframes})   $p2_wins',
                               style: TextStyle(
                                 fontSize: 25,
-                                fontWeight: FontWeight.bold,
+                                // fontWeight: FontWeight.bold,
                               )))),
               // Player 2 Name
               Container(
@@ -139,7 +140,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 height: 45,
                 child: Center(
                   child: Text(
-                    widget.p2name.toUpperCase(),
+                    widget.p2name,
+                    // .toUpperCase(),
                     style: GoogleFonts.ptSerif(
                       textStyle: TextStyle(
                         fontSize: 35,
@@ -307,7 +309,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                   elevation: 5,
                   child: Center(
                       child: Text(
-                    'Greenbull Cafe',
+                    'Snooker Match',
                     style: GoogleFonts.ptSerif(
                         textStyle:
                             TextStyle(fontSize: 20, color: Colors.white)),
@@ -601,7 +603,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
                         child: Image.asset(
-                          'images/GBlogo_flat.jpeg',
+                          'images/divij.sahu.logo.trans2.png',
                           width: width * 0.2,
                           fit: BoxFit.cover,
                         ),
@@ -1234,15 +1236,15 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
             ],
           ),
           // Developer Credits
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text('Developed by ~>> Divij Sahu!       ',
-                  style: GoogleFonts.ptSerif(
-                      textStyle:
-                          TextStyle(fontSize: 10, color: Colors.blueGrey)))
-            ],
-          )
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.end,
+          //   children: [
+          //     Text('Developed by ~>> Divij Sahu!       ',
+          //         style: GoogleFonts.ptSerif(
+          //             textStyle:
+          //                 TextStyle(fontSize: 10, color: Colors.blueGrey)))
+          //   ],
+          // )
         ],
       ),
     );
