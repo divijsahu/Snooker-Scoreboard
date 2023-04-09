@@ -99,7 +99,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 height: 45,
                 child: Center(
                   child: Text(
-                    widget.p1name.toUpperCase(),
+                    widget.p1name ,
+                    // .toUpperCase(),
                     style: GoogleFonts.ptSerif(
                       textStyle: TextStyle(
                         fontSize: 35,
@@ -130,8 +131,10 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           Text('$p1_wins   (${widget.totalframes})   $p2_wins',
                               style: TextStyle(
                                 fontSize: 25,
+
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
+
                               )))),
               // Player 2 Name
               Container(
@@ -153,7 +156,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 height: 45,
                 child: Center(
                   child: Text(
-                    widget.p2name.toUpperCase(),
+                    widget.p2name,
+                    // .toUpperCase(),
                     style: GoogleFonts.ptSerif(
                       textStyle: TextStyle(
                         fontSize: 35,
@@ -315,6 +319,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               ),
               // Green Bull Cafe
               Container(
+
                 height: 30,
                 decoration: BoxDecoration(
                   // color: Colors.transparent,
@@ -323,6 +328,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                     fit: BoxFit.fill,
                   ),
                   borderRadius: BorderRadius.circular(50),
+                
                 ),
                 child: Center(
                     child: Text(
@@ -622,7 +628,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
                         child: Image.asset(
-                          'images/GBlogo_flat.jpeg',
+                          'images/divij.sahu.logo.trans2.png',
                           width: width * 0.2,
                           fit: BoxFit.cover,
                         ),
@@ -1279,6 +1285,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
             ],
           ),
           // Developer Credits
+
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -1292,6 +1299,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           TextStyle(fontSize: 10, color: Colors.blueGrey)))
             ],
           )
+
         ],
       ),
     );
