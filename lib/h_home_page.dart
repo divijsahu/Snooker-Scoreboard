@@ -300,8 +300,12 @@ class _MyHHomePageState extends State<MyHHomePage> {
                     ),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      Text('    Made with ❤️ in India!',
+                          style: GoogleFonts.ptSerif(
+                              textStyle: TextStyle(
+                                  fontSize: 12, color: Colors.blueGrey))),
                       Text('Developed by ~>> Divij Sahu!    ',
                           style: GoogleFonts.ptSerif(
                               textStyle: TextStyle(
