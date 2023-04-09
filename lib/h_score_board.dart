@@ -83,9 +83,13 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               Container(
                 decoration: BoxDecoration(
                     // color: Colors.amberAccent.shade100,
-                    image: DecorationImage(
-                      image: AssetImage('images/container_bg.jpg'),
-                      fit: BoxFit.fill,
+                    // image: DecorationImage(
+                    //   image: AssetImage('images/container_bg.jpg'),
+                    //   fit: BoxFit.fill,
+                    // ),
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 0.5,
                     ),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(80),
@@ -100,7 +104,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                     style: GoogleFonts.ptSerif(
                       textStyle: TextStyle(
                         fontSize: 35,
-                        // fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -109,9 +114,13 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               // Frame & Wins Card
               Container(
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('images/container_bg.jpg'),
-                      fit: BoxFit.fill,
+                    // image: DecorationImage(
+                    //   image: AssetImage('images/container_bg.jpg'),
+                    //   fit: BoxFit.fill,
+                    // ),
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 0.5,
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -122,15 +131,22 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           Text('$p1_wins   (${widget.totalframes})   $p2_wins',
                               style: TextStyle(
                                 fontSize: 25,
-                                // fontWeight: FontWeight.bold,
+
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+
                               )))),
               // Player 2 Name
               Container(
                 decoration: BoxDecoration(
-                    color: Colors.amberAccent.shade100,
-                    image: DecorationImage(
-                      image: AssetImage('images/container_bg.jpg'),
-                      fit: BoxFit.fill,
+                    // color: Colors.grey.shade800,
+                    // image: DecorationImage(
+                    //   image: AssetImage('images/container_bg.jpg'),
+                    //   fit: BoxFit.fill,
+                    // ),
+                    border: Border.all(
+                      color: Colors.white,
+                      width: 0.5,
                     ),
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(80),
@@ -145,7 +161,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                     style: GoogleFonts.ptSerif(
                       textStyle: TextStyle(
                         fontSize: 35,
-                        // fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -167,7 +184,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -184,7 +201,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -201,7 +218,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -218,7 +235,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -235,7 +252,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -252,7 +269,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -272,7 +289,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         width: 5,
                       ),
                       Container(
-                        width: 35,
+                        width: 30,
                         height: 25,
                         decoration: BoxDecoration(
                           color: Colors.black,
@@ -302,19 +319,26 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
               ),
               // Green Bull Cafe
               Container(
-                height: 40,
-                width: width * 0.2,
-                child: Card(
-                  color: Colors.black,
-                  elevation: 5,
-                  child: Center(
-                      child: Text(
-                    'Snooker Match',
-                    style: GoogleFonts.ptSerif(
-                        textStyle:
-                            TextStyle(fontSize: 20, color: Colors.white)),
-                  )),
+
+                height: 30,
+                decoration: BoxDecoration(
+                  // color: Colors.transparent,
+                  image: DecorationImage(
+                    image: AssetImage('images/container_bg.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                  borderRadius: BorderRadius.circular(50),
+                
                 ),
+                child: Center(
+                    child: Text(
+                  'Golden Frame Tournament',
+                  style: GoogleFonts.ptSerif(
+                      textStyle: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold)),
+                )),
               ),
               // Individual Player 2 Balls Pot Count
               Container(
@@ -334,7 +358,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                             width: 0.5,
                           ),
                         ),
-                        width: 35,
+                        width: 30,
                         height: 25,
                         child: Card(
                           color: Colors.black,
@@ -354,7 +378,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         width: 5,
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -371,7 +395,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -388,7 +412,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -405,7 +429,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -422,7 +446,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -439,7 +463,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                         ),
                       ),
                       Container(
-                        width: 40,
+                        width: 30,
                         height: 40,
                         child: Card(
                           elevation: 3,
@@ -564,7 +588,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                         : '0',
                                     style: GoogleFonts.ptSerif(
                                         textStyle: TextStyle(
-                                            fontSize: 55,
+                                            fontSize: 65,
+                                            fontWeight: FontWeight.bold,
                                             color: Colors.white))),
                               )),
                           Card(
@@ -669,7 +694,8 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                                         : '0',
                                     style: GoogleFonts.ptSerif(
                                         textStyle: TextStyle(
-                                            fontSize: 55,
+                                            fontSize: 65,
+                                            fontWeight: FontWeight.bold,
                                             color: Colors.white))),
                               )),
                           Card(
@@ -765,20 +791,30 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: Container(
                     height: 35,
-                    width: width * 0.20,
+                    width: width * 0.25,
+                    // Golden Color Container
+                    // color: Colors.transparent,
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/container_bg.jpg'),
-                          fit: BoxFit.fill,
+                        // image: DecorationImage(
+                        //   image: AssetImage('images/container_bg.jpg'),
+                        //   fit: BoxFit.fill,
+                        // ),
+                        // color: Colors.grey.shade800,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 0.5,
                         ),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(80),
                           bottomRight: Radius.circular(80),
                         )),
                     child: Center(
-                        child: Text(
-                      'Remaining Reds ${widget.totalreds}',
-                    ))),
+                        child: Text('Remaining Reds ${widget.totalreds}',
+                            style: GoogleFonts.ptSerif(
+                                textStyle: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white))))),
               ),
               // Balls Potting Buttons
               Card(
@@ -989,17 +1025,29 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                 padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                 child: Container(
                     height: 35,
-                    width: width * 0.20,
+                    width: width * 0.25,
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/container_bg.jpg'),
-                          fit: BoxFit.fill,
+                        // color: Colors.grey.shade800,
+
+                        // image: DecorationImage(
+                        //   image: AssetImage('images/container_bg.jpg'),
+                        //   fit: BoxFit.fill,
+                        // ),
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 0.5,
                         ),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(80),
                           bottomLeft: Radius.circular(80),
                         )),
-                    child: Center(child: Text('$left_points Points on Table'))),
+                    child: Center(
+                        child: Text('$left_points Points on Table',
+                            style: GoogleFonts.ptSerif(
+                                textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold))))),
               ),
             ],
           ),
@@ -1066,6 +1114,7 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
                           setState(() {
                             if (widget.totalreds < widget.totalredsdummy) {
                               widget.totalreds++;
+                              shot_after_last_red = false;
                             }
                             // if (current_turn == 1) {
                             //   p2_score += 4;
@@ -1236,15 +1285,21 @@ class _HScoreBoardPageState extends State<HScoreBoardPage> {
             ],
           ),
           // Developer Credits
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.end,
-          //   children: [
-          //     Text('Developed by ~>> Divij Sahu!       ',
-          //         style: GoogleFonts.ptSerif(
-          //             textStyle:
-          //                 TextStyle(fontSize: 10, color: Colors.blueGrey)))
-          //   ],
-          // )
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('    Made with ❤️ in India!',
+                  style: GoogleFonts.ptSerif(
+                      textStyle:
+                          TextStyle(fontSize: 12, color: Colors.blueGrey))),
+              Text('Developed by ~>> Divij Sahu!       ',
+                  style: GoogleFonts.ptSerif(
+                      textStyle:
+                          TextStyle(fontSize: 10, color: Colors.blueGrey)))
+            ],
+          )
+
         ],
       ),
     );

@@ -299,16 +299,22 @@ class _MyHHomePageState extends State<MyHHomePage> {
                       ],
                     ),
                   ),
-                  //Developer Credits
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.end,
-                  //   children: [
-                  //     Text('Developed by ~>> Divij Sahu!    ',
-                  //         style: GoogleFonts.ptSerif(
-                  //             textStyle: TextStyle(
-                  //                 fontSize: 12, color: Colors.blueGrey)))
-                  //   ],
-                  // )
+ 
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('    Made with ❤️ in India!',
+                          style: GoogleFonts.ptSerif(
+                              textStyle: TextStyle(
+                                  fontSize: 12, color: Colors.blueGrey))),
+                      Text('Developed by ~>> Divij Sahu!    ',
+                          style: GoogleFonts.ptSerif(
+                              textStyle: TextStyle(
+                                  fontSize: 12, color: Colors.blueGrey)))
+                    ],
+                  )
+
+    
                 ],
               ),
             )));
